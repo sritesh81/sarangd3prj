@@ -23,10 +23,10 @@ $("#var-select").on("change", function() { lineChart.wrangleData() })
 // Add jQuery UI slider
 $("#date-slider").slider({
     range: true,
-    max: parseTime("31/10/2017").getTime(),
-    min: parseTime("12/5/2013").getTime(),
+    max: parseTime("30/6/2019").getTime(),
+    min: parseTime("12/5/2015").getTime(),
     step: 86400000, // One day
-    values: [parseTime("12/5/2013").getTime(), parseTime("31/10/2017").getTime()],
+    values: [parseTime("12/5/2015").getTime(), parseTime("30/6/2019").getTime()],
     slide: function(event, ui){
         $("#dateLabel1").text(formatTime(new Date(ui.values[0])));
         $("#dateLabel2").text(formatTime(new Date(ui.values[1])));
