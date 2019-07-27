@@ -20,10 +20,10 @@ $("#var-select").on("change", updateCharts)
 // Add jQuery UI slider
 $("#date-slider").slider({
     range: true,
-    max: parseTime("31/10/2017").getTime(),
-    min: parseTime("12/5/2013").getTime(),
+    max: parseTime("31/6/2019").getTime(),
+    min: parseTime("12/5/2015").getTime(),
     step: 86400000, // One day
-    values: [parseTime("12/5/2013").getTime(), parseTime("31/10/2017").getTime()],
+    values: [parseTime("12/5/2015").getTime(), parseTime("31/6/2019").getTime()],
     slide: function(event, ui){
         $("#dateLabel1").text(formatTime(new Date(ui.values[0])));
         $("#dateLabel2").text(formatTime(new Date(ui.values[1])));
@@ -50,11 +50,11 @@ d3.json("data/coins.json").then(function(data){
         });
     }
 
-    lineChart1 = new LineChart("#chart-area1", "bitcoin");
-    lineChart2 = new LineChart("#chart-area2", "ethereum");
-    lineChart3 = new LineChart("#chart-area3", "bitcoin_cash");
-    lineChart4 = new LineChart("#chart-area4", "litecoin");
-    lineChart5 = new LineChart("#chart-area5", "ripple");
+    lineChart1 = new LineChart("#chart-area1", "stockA");
+    lineChart2 = new LineChart("#chart-area2", "stockB");
+    lineChart3 = new LineChart("#chart-area3", "stockC");
+    lineChart4 = new LineChart("#chart-area4", "stockD");
+    lineChart5 = new LineChart("#chart-area5", "stockE");
 
 })
 
